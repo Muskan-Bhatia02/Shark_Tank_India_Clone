@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shark Tank Blog - Write for Us</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+		<!-- Navigation bar -->
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- <a class="navbar-brand" href="#">Shark Tank Blog</a> -->
+	
+					<a class="navbar-brand" href="#">
+						<img src="sharktank.png" width="40" height="50" class="d-inline-block align-top" alt="">
+					  </a>
+					  <a class="navbar-brand" href="#">Shark Tank Blog</a>
+				</div>
+	
+				<div class="collapse navbar-collapse " id="navbar-collapse">
+					<ul class="nav navbar-nav tabs">
+						<li class="active hover-underline-animation"><a href="index.html">Home</a></li>
+						<li class="hover-underline-animation"><a href="episodes.html">Episodes</a></li>
+						<li class="hover-underline-animation"><a href="judges.html">Shark Tank India Judges</a></li>
+						<li class="hover-underline-animation"><a href="products.html">Shark Tank Products</a></li>
+						<li class="hover-underline-animation"><a href="write-for-us.html">Write for Us</a></li>
+						<li class="hover-underline-animation"><a href="ideas.html">Ideas</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+
+<!-- Main content -->
+<div class="container">
+	<h1>Write for Us</h1>
+	<p>If you have an interesting article or idea about Shark Tank, we'd love to hear from you! Fill out the form below to submit your content for consideration.</p>
+
+	<form action="write_for_us.php" method="post">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" name ="name" placeholder="Enter your name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email address</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
+		</div>
+		<div class="form-group">
+			<label for="title">Article Title</label>
+			<input type="text" class="form-control" id="title" name="title" placeholder="Enter the title of your article">
+		</div>
+		<div class="form-group">
+			<label for="content">Article Content</label>
+			<textarea class="form-control" id="content" rows="10" name="content" placeholder="Enter the content of your article"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</action=>
+</div>
+
+<!-- Footer -->
+<footer>
+	<div class="container">
+		<p>&copy; 2023 Shark Tank Blog</p>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

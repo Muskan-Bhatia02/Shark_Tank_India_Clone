@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ideas</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  	<!-- Navigation bar -->
+	<nav class="navbar navbar-brand">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- <a class="navbar-brand" href="#">Shark Tank Blog</a> -->
+
+				<a class="navbar-brand" href="#">
+					<img src="sharktank.png" width="40" height="50" class="d-inline-block align-top" alt="">
+				  </a>
+				  <a class="navbar-brand" href="#">Shark Tank Blog</a>
+			</div>
+
+			<div class="collapse navbar-collapse " id="navbar-collapse">
+				<ul class="nav navbar-nav tabs">
+					<li class="active hover-underline-animation"><a href="index.html">Home</a></li>
+					<li class="hover-underline-animation"><a href="episodes.html">Episodes</a></li>
+					<li class="hover-underline-animation"><a href="judges.html">Shark Tank India Judges</a></li>
+					<li class="hover-underline-animation"><a href="products.html">Shark Tank Products</a></li>
+					<li class="hover-underline-animation"><a href="write-for-us.html">Write for Us</a></li>
+					<li class="hover-underline-animation"><a href="ideas.html">Ideas</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+  <div class="container mt-5">
+    <h1>Submit Your Ideas</h1>
+    <form action="ideas-submit.php" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="prototype-image">Prototype Image</label>
+        <input type="file" class="form-control-file" id="prototype-image" name="prototype-image" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+
+
+
+
+<!-- <?php 
+  
+$sql = "SELECT * FROM ideas";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+  echo '<div>';
+  echo '<h2>' . $row['title'] . '</h2>';
+  echo '<p>' . $row['description'] . '</p>';
+  echo '<img src="' . $row['image_path'] . '" />';
+  echo '</div>';
+}
+?> -->
+
+
+<!-- <div class="container mt-5">
+  <h1>Ideas Submitted</h1>
+  <div class="row">
+    <?php
+    $sql = "SELECT * FROM ideas";
+    $result = mysqli_query($conn, $sql);
+
+
+   while ($row = mysqli_fetch_assoc($result)) {
+    ?>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" <?php src="' . $row['image_path'] . '"  alt="Image">
+          <div class="card-body">
+            <h5 class="card-title"> <?php echo . $row['title'] .  ?></h5>
+            <p class="card-text"> <?php echo . $row['description']. ?></p>
+          </div>
+        </div>
+      </div>
+    <?php
+    }
+    ?>
+  </div>
+</div> -->
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+    <!-- Form for submitting a new idea -->
+    <!-- <div class="container">
+    <h2>Submit Your Idea</h2>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">Prototype Image:</label>
+        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+      </div>
+      <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+    </form>
+  </div>
+  
+  Display submitted ideas in cards format 
+  <div class="container mt-5">
+    <h2>Ideas Submitted</h2>
+    <div class="row">
+      <?php foreach ($ideas as $idea): ?>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img class="card-img-top" src="<?php echo $idea['image']; ?>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $idea['title']; ?></h5>
+              <p class="card-text"><?php echo $idea['description']; ?></p>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+   -->
